@@ -1,0 +1,21 @@
+# Config bebin ---
+box_url = 'http://developer.nrel.gov/downloads/vagrant-boxes/CentOS-6.4-x86_64-v20130427.box'
+memory_mb = 1024
+# --- Config end
+
+Vagrant.configure('2') do |config|
+  config.vm.box = 'rails_sandbox'
+  config.vm.box_url = box_url
+  config.vm.provider :virtualbox do |vb|
+    vb.customize ['modifyvm', :id, '--memory', memory_mb]
+  end
+
+  config.berkshelf.enabled = true
+
+  config.vm.provision :chef_solo do |chef|
+    chef.run_list = [
+      'recipe[base]',
+      'recipe[base::rails]',
+    ]
+  end
+end
