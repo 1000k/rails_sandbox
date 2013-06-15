@@ -12,4 +12,6 @@ Usage
 1. Edit variables in Vagrantfile.
 1. `vagrant up`
 
-Now you have the VM.
+Now you have the VM. Create RoR app with the following code:
+
+`$ rbenv exec rails new path/to/app`

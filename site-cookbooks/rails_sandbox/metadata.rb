@@ -1,4 +1,4 @@
-name             'base'
+name             'rails_sandbox'
 maintainer       'SENDA Keijiro'
 maintainer_email 'YOUR_EMAIL'
 license          'All rights reserved'
