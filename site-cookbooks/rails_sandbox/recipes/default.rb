@@ -14,9 +14,12 @@ if node['rails_sandbox']['nodejs']['install']
   include_recipe 'rails_sandbox::nodejs'
 end
 
-ruby_version = node['rails_sandbox']['ruby_version']
+# Enable to connect from host OS.
+service 'iptables' do
+  action [:stop, :disable]
+end
 
-rbenv_ruby ruby_version do 
+rbenv_ruby node['rails_sandbox']['ruby_version'] do 
   global true
 end
 
