@@ -1,9 +1,3 @@
-#
-# Cookbook Name:: rails_sandbox
-# Recipe:: default
-#
-# Copyright 2013, SENDA Keijiro
-
 node.set['build_essential']['compiletime'] = true
 include_recipe 'build-essential'
 
@@ -22,10 +16,11 @@ rbenv_ruby ruby_version do
   global true
 end
 
-execute 'gem update --system'
+execute 'gem update --system' if node['rails_sandbox']['update_gem']
 
 gem_package 'rails' do
-  options '--force'
+  version node['rails_sandbox']['rails_version']
+  options node['rails_sandbox']['rails_options']
 end
 
 execute '/opt/rbenv/bin/rbenv rehash'
