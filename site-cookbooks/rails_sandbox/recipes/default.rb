@@ -10,6 +10,10 @@ end
 include_recipe 'rbenv::default'
 include_recipe 'rbenv::ruby_build'
 
+if node['rails_sandbox']['nodejs']['install']
+  include_recipe 'rails_sandbox::nodejs'
+end
+
 ruby_version = node['rails_sandbox']['ruby_version']
 
 rbenv_ruby ruby_version do 
