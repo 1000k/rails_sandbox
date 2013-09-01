@@ -15,3 +15,12 @@ Usage
 Now you have the VM. Create RoR app with the following code:
 
 `$ rbenv exec rails new path/to/app`
+
+
+Troubleshooting
+---------------
+### bundle commands is too slow
+It will be bug of RHEL/CentOS 6.x.
+Try add `options single-request-reopen` to your `/etc/resolv.conf`.
+
+ref: [Slow networking (due to IPv6?) on CentOS 6.x · Issue #1172 · mitchellh/vagrant](https://github.com/mitchellh/vagrant/issues/1172#issuecomment-9444659)
