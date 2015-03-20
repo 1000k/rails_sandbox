@@ -4,12 +4,12 @@ Ruby on Rails cookbook
 Requirements
 ------------
 ### Cookbooks
--[build-essential](https://github.com/opscode-cookbooks/build-essential)
--[vim](https://github.com/opscode-cookbooks/vim)
--[git](https://github.com/opscode-cookbooks/git)
--[apt](https://github.com/opscode-cookbooks/apt)
--[yum](https://github.com/opscode-cookbooks/yum)
--[rbenv](https://github.com/RiotGames/rbenv-cookbook)
+- [build-essential](https://github.com/opscode-cookbooks/build-essential)
+- [vim](https://github.com/opscode-cookbooks/vim)
+- [git](https://github.com/opscode-cookbooks/git)
+- [apt](https://github.com/opscode-cookbooks/apt)
+- [yum](https://github.com/opscode-cookbooks/yum)
+- [rbenv](https://github.com/RiotGames/rbenv-cookbook)
 
 
 Supports
